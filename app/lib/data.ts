@@ -215,12 +215,3 @@ export async function fetchFilteredCustomers(query: string) {
     throw new Error('Failed to fetch customer table.');
   }
 }
-
-export async function fetchCollectedInvoicesNum() {
-  try {
-    const data = await sql<{number:string}>`SELECT COUNT()`;
-    return data;
-  } catch (err) {
-    
-  }
-}
